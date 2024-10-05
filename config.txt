@@ -1,0 +1,14 @@
+Prefix pipelines/Derfinder/
+#Plugin RegionMatrix inputfile AMY/ outputfile regionmatrix
+#Plugin Wald inputfile regionmatrix.rds outputfile wald.csv
+#Plugin Limma inputfile regionmatrix.rds outputfile limma.csv
+#Plugin Rail inputfile parameters/parameters.rail.txt outputfile rail.csv
+#Plugin SampleDepth inputfile regionmatrix.fullCov.rds outputfile models.rds
+#Plugin CHR inputfile parameters/parameters.chr.txt outputfile results.rds
+#Plugin MergeChromosomes inputfile results.rds outputfile fullRegions.rds
+#Plugin DNAAnnotate inputfile fullRegions.rds outputfile annotate.DNA.region.csv
+#Plugin RegionCoverage inputfile parameters/parameters.regioncoverage.txt outputfile regionCov.csv
+#Plugin Coverage2Exon inputfile regionmatrix.fullCov.rds outputfile exons.csv
+#Plugin DNAAnnotate inputfile regionmatrix.chr21.rds outputfile annotate.DNA.chr21.csv
+#Plugin HumanRNAAnnotate inputfile none outputfile genes.rds
+Plugin MatchGene inputfile parameters/parameters.matchgene.txt outputfile matchedgenes.csv
